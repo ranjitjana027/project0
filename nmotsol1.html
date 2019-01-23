@@ -6,52 +6,10 @@
 <body>
 <h1> Solution</h1>
 <div>
-<p>
-1.
-
-#include<stdio.h>
-#include<math.h>
-#include<stdlib.h>
-double find_root(double,double );
-double f(double);
-double pow(double d,double n)
-{
-	int i;
-	double s=d;
-	for(i=0;i<n;i++)
-		s=s*d;
-	return s;
-}
-double f(double x)
-{
-	/*return (x-0.5);return ( pow(x,4)+ 2*pow(x,3)-x-1);*/
-	return (x*x*x*x+2*x*x*x-x-1);
-}
-int main()
-{
-	double l=0, u=1;
-	printf("Root of the equation is %.4f\n", find_root(l,u));
-	return 0;
-}
-double find_root(double l, double u)
-{
-	int i;
-	double m;
-	for(i=0;i<10;i++)
-	{
-		m=(l+u)/2;
-		printf("l= %f, u=%f m=%f\n",l,u,m);
-		if( f(l)*f(m)<0)
-			u=m;
-		else if ( f(l)*f(m)>0)
-			l=m;
-		else if( f(l)*f(m)==0)
-			break;
-	}
-return m;
-}
-
-</p>
+<ol>
+<li><a href=" https://drive.google.com/open?id=1Cprd9qP7bkcNHYC2jDvBq15-zES97cKO"> Problem 1</a>
+<li> <a href="https://drive.google.com/open?id=1qgaO_iA70PmqMVaS5kJkix_GIx_P4-qD ">Problem 2</a>
+</ol>
 </div>
 </body>
 </html>
