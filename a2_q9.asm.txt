@@ -1,0 +1,66 @@
+.model small
+.stack 100h
+.data
+	arr dw 1,2,3,4,5,6,7,8,9,10
+	num dw -5
+	beg db ?
+	last db ?
+	two db 2
+	found dw 0
+	mes1 db "Search Successfull. $"
+	mes2 db "Search Failed$"
+	mes3 db "Position of the number: $"
+.code
+	main proc
+	mov ax, @data
+	mov ds, ax
+
+	mov si, offset arr
+	
+	mov dx, num
+	mov ax, 0
+	mov cx, 0
+	mov cl, 9
+	mov beg, al
+L1:	cmp beg,cl
+	jg L4
+	mov al, beg
+	mov ah, 0
+	add al,cl
+	div two
+	mov bx, 0
+	mov bl,al
+	cmp dx, [si+bx]
+	je L3
+	jl L2
+	add al, 1
+	mov beg, al
+	jmp l1
+L2:	sub al, 1
+	mov cl,al
+	jmp L1
+L3:	mov dx,1
+	mov found , dx
+L4:	mov dx, found
+	cmp dx,0
+	je L5
+	mov dx, offset mes1
+	mov ah, 09h
+	int 21h
+	mov dx, offset mes3
+	mov ah, 09h
+	int 21h
+	mov dx, bx
+	add dx,1
+	add dx, 30h
+	mov ah, 02h
+	int 21h
+	jmp l6
+L5:	mov dx, offset mes2
+	mov ah, 09h
+	int 21h
+L6:
+	mov ah, 4ch
+	int 21h
+	main endp
+end main
