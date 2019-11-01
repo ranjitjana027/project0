@@ -4,55 +4,122 @@
 		<title>Home</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
-		
-		@media (min-width: 733px){
-div
-                {
-                 display: none;
-}
-		 h1.headline::before {
-		content:"Welcome to My Web Page!!!";
-		
-		
-		color:red;}
-		}
-		@media (max-width:732px){
-                
 
-		h1.headline::before{
-		content:"Welcome!!!";
-		color:navy;
-		}}
-		.headline{
-	background-color: lightyellow;
-	padding:5px;
-	text-align:center;
-	margin:30px;
-	font-style: italic;
-	
+		@media (min-width: 733px)
+		{
+			div.image
+			{
+				display: none;
+			}
+			h1.headline::before
+			{
+				content:"Welcome to My Web Page!!!";
+				color:red;
+			}
+		}
+
+		@media (max-width:732px)
+		{
+			.image
+			{
+				padding: 30px;
+				width: 100% ;
+
+			}
+
+			h1.headline::before
+			{
+				content:"Welcome!!!";
+				color:navy;
+			}
+		}
+		.headline
+		{
+			background-color: lightyellow;
+			padding:5px;
+			text-align:center;
+			margin:30px;
+			font-style: italic;
+
 		}
 		a.a1:hover
 		{
-		color: orange;
-		
+			color: orange;
+
 		}
-		
+		#table
+		{
+			margin-left: 10px;
+		}
+		table
+		{
+			border:  solid green;
+			padding: 10px;
+			margin: 30px;
+			border-style: dotted;
+		}
+		 td
+		 {
+			 border: solid cyan;
+			 border-radius: 10px;
+			 padding: 10px;
+			 margin: 30px;
+			 border-style: inset;
+		 }
+		th
+		{
+			color: purple;
+			font-size: 18px;
+			border: solid red;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 30px;
+			border-style: inset;
+		}
+
+
 				</style>
 		<link rel="stylesheet" href="styles.css" >
-		
+
 	</head>
 	<body>
 		<h1 class="headline"></h1>
 		<h1>LAB ASSIGNMENT 2019</h1>
-		
+
 		<ul>
 			<li>	<a  class="a1" href="page2.html" >Microprocessor</a></li>
 			<li> <a class="a1" href="page3.html" >Object Oriented Programming II</a> </li>
 			<li> <a class="a1" href="page4.html" >Numerical Method Analysis</a> </li>
 		</ul>
-		<div>
-		<blockquote class="twitter-tweet tw-align-center" data-lang="en" ><p lang="hi" dir="ltr">suno, by road chalte hain, unki radar ko lagega ki bus aa rahi hai. <a href="https://t.co/jkF1Vs1Kll">pic.twitter.com/jkF1Vs1Kll</a></p>&mdash; Rofl Gandhi (@RoflGandhi_) <a href="https://twitter.com/RoflGandhi_/status/1127279913944305664?ref_src=twsrc%5Etfw">May 11, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<div class='image'>
+		<img src="assets/img/index.jpeg">
 		</div>
+		<div id="table">
+			<h2 >Lab Schedule</h2>
+			<table>
+				<tr>
+					<th>Day</th>
+					<th>Subject</th>
+					<th>Session</th>
+				</tr>
+				<tr>
+					<td>Monday</td>
+					<td>Microprocessor Lab</td>
+					<td>Morning</td>
+				</tr>
+				<tr>
+					<td>Tuesday</td>
+					<td>Object Oriented Programming Lab II</td>
+					<td>Afternoon</td>
+				</tr>
+				<tr>
+					<td>Thursday</td>
+					<td>Numerical Analysis Lab</td>
+					<td>Afternoon</td>
+				</tr>
+			</table>
+
+		</div>
+
 	</body>
 </html>

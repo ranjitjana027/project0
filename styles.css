@@ -9,7 +9,7 @@ h1 {
 	color: green;
 	background-color: lightgray;
 	margin:30px;
-	
+
 	text-align:center;
 }
 h2
@@ -17,9 +17,9 @@ h2
 }
 div
 {
-	color: lightyellow;
-	margin:30px;
-	
+	font-style: oblique;
+	margin:0px auto;
+
 }
 p
 {
